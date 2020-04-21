@@ -19,3 +19,9 @@ if __name__=='__main__':
     print(philip.idade)
     for filho in philip.filhos:
         print(filho.nome)
+    #atributo dinamico em tempo de execulsão
+    philip.sobrenome=nome='Fulano'
+    print(philip.sobrenome)#somente pra este objeto
+    del philip.filhos #remove dinamicamente
+    print(philip.__dict__)
+    print(alves.__dict__)
