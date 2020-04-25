@@ -9,9 +9,13 @@ class Pessoa:
     def cumprimentar(self):
         return f'Ola {id(self)}'
 
+class Homem(Pessoa):
+    pass
 
 if __name__=='__main__':
     alves=Pessoa(nome='Alves')
+    #herdando de pessoa como alternativa poredera ser:
+    #alves = Homem(nome='Alves')
     philip=Pessoa(alves,nome='Philip')#passando alves como atributo filho
     print(Pessoa.cumprimentar(philip))#sem necessidade
     print(id(philip))
@@ -30,3 +34,6 @@ if __name__=='__main__':
     print(alves.__dict__)
     print(Pessoa.olhos)#viavel pois é um atributos de classe
     print(id(Pessoa.olhos),id(philip.olhos))
+    pessoa=Pessoa('anonimo')
+    print(isinstance(pessoa,Pessoa))
+
