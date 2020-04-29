@@ -57,6 +57,7 @@ class PassaroFake(AtorFake):
         return self._lancado
 
     def lancar(self, angulo, tempo):
+        #lançamento de exeções
         if self._lancado:
             raise DuploLancamentoExcecao()
         self._lancado = True
@@ -177,7 +178,7 @@ class FaseTestes(TestCase):
         # lançados não causa erro
 
         self.assertTrue(passaros[0].foi_lancado())
-        self.assertTrue(passaros[1].foi_lancado())
+        self.assertTrue(passaros[1].foi_lancado())#certifica que foi lançado seja verdadeiro apos lançado
 
     def teste_intervalo_de_colisao_padrão(self):
         '''
