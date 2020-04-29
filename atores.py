@@ -155,7 +155,7 @@ class Passaro(Ator):
         self.x = x_atual
 
     def _esta_voando(self):
-        return self._foi_lancado() and self.status==ATIVO
+        return self.foi_lancado() and self.status==ATIVO
 
 
 class PassaroAmarelo(Passaro):
